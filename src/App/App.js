@@ -15,10 +15,14 @@ const App = () => {
   const handleImageUpload = (e, image) => {
     setMessage('The Rock gods are convening, please wait for their verdict...');
     e.preventDefault();
+    const imageData = new FormData();
 
-    console.log(image);
+    imageData.append('file', image)
 
-    fetch('/classify').then(res => res.json()).then(data => {
+    fetch('/classify', {
+      method: 'POST',
+      body: imageData,
+    }).then(res => res.json()).then(data => {
       setMessage(`Your mighty weapon looks like a ${data.name}, thank you for your offering 🤘`);
     });
   }
