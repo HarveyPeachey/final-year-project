@@ -1,6 +1,7 @@
 import './App.css';
 import Header from '../Header/Header'
 import MessageBox from '../MessageBox/MessageBox'
+import ImageUploader from '../ImageUploader/ImageUploader'
 
 const App = () => {
 
@@ -10,6 +11,7 @@ const App = () => {
     <div className="App">
       <Header/>
       <MessageBox message={message}/>
+      <ImageUploader/>
     </div>
   );
 }
