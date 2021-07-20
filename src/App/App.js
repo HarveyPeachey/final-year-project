@@ -18,9 +18,9 @@ const App = () => {
 
     console.log(image);
 
-    setTimeout(() => {
-      setMessage('Your mighty weapon looks like a {PLACE_HOLDER} thank you for your offering')
-    }, 5000);
+    fetch('/classify').then(res => res.json()).then(data => {
+      setMessage(`Your mighty weapon looks like a ${data.name}, thank you for your offering 🤘`);
+    });
   }
 
   return (

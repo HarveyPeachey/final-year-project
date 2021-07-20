@@ -36,7 +36,7 @@ const ImageUploader = ( {handleHasImage, handleImageUpload} ) => {
         <input {...getInputProps()} />
         <p>Drag 'n' drop your image here, or click to select an image</p>
       </div>
-     {!(hasImage && hasUploaded) && <Button text="Commune" />}
+     {(hasImage && (hasImage && !hasUploaded)) && <Button text="Commune" />}
     </form>
     </>
   );
