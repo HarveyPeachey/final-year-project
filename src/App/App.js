@@ -5,7 +5,7 @@ import ImageUploader from '../ImageUploader/ImageUploader'
 
 const App = () => {
 
-  const message = "Please place your mighty weapon of Rock before us";
+  const message = "Please place your mighty weapon of Rock before us:";
 
   return (
     <div className="App">
