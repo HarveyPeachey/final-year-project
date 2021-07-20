@@ -15,7 +15,12 @@ const App = () => {
   const handleImageUpload = (e, image) => {
     setMessage('The Rock gods are convening, please wait for their verdict...');
     e.preventDefault();
+
     console.log(image);
+
+    setTimeout(() => {
+      setMessage('Your mighty weapon looks like a {PLACE_HOLDER} thank you for your offering')
+    }, 5000);
   }
 
   return (
