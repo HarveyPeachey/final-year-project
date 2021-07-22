@@ -23,7 +23,7 @@ const App = () => {
       method: 'POST',
       body: imageData,
     }).then(res => res.json()).then(data => {
-      setMessage(`Your mighty weapon looks like a ${data.name}, thank you for your offering 🤘`);
+      setMessage(`We think your mighty weapon looks like a ${data.name}, thank you for your offering 🤘`);
     });
   }
 
